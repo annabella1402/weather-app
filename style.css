@@ -1,0 +1,79 @@
+h1 {
+    color: lightskyblue;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 48px;
+    text-align: left;
+    line-height: 28px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+h2 {
+    color: lightslategray;
+    margin: 10px;
+    text-align: left;
+    display: block;
+    height: 19px;
+    line-height: 1;
+    font-size: 16px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    margin: 0 0 10px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.weather-elements {
+    list-style-type: none;
+    color: #9aa0a6;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    padding-right: 9px;
+    padding-top: 6px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.week-days {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    padding: 0px;
+    font-weight: bold;
+}
+
+.container {
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+.btn-primary {
+    color: white;
+    background-color: lightskyblue;
+    border-color: lightskyblue;
+    display: block;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    cursor: pointer;
+    background-color: white;
+    color: lightblue;
+    border: lightskyblue;
+}
+
+.weather-app {
+    border: 2px solid;
+    color: mediumslateblue;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.image-days {
+    font-size: 20px;
+    color: #b5b9c0;
+}
