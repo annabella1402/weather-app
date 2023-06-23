@@ -9,7 +9,7 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-UPpNb1DHly5EJKC8vZV+s3UxedlFJ+0a4oBbuDIRS6xiBOrjx3l9E3KCEZoLqT4V" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -21,11 +21,11 @@
                         <input id="search-bar" type="search" placeholder="Enter a city" class="form-control shadow-sm"
                             id="city-input">
                     </div>
-                    <div class="col-2">
+                    <div class="col-3">
                         <input class="btn btn-primary shadow-sm" type="submit" value="Search" autofocus="on"
                             class="form-control" />
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                         <input class="btn btn-primary shadow-sm" value="Current city" id="current-location-button"
                             class="current-location-button" />
                     </div>
@@ -40,7 +40,9 @@
                                 Caracas
                             </h1>
                             <div class="float-left">
-                                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png">
+                                <img id="icon"
+                                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png">
+
                                 <h2>
                                     <span class="temperature" id="temperature"></span>
                                     <span class="units">°C</span>
@@ -50,77 +52,78 @@
                                 </ul>
                                 <p class="current-time" id="current-time">Saturday 07:30</p>
                                 <div class="float-left">
-                                    <span class="temperature" id="temperature">19</span><span
+                                    <span class="temperature" id="temperature"></span><span
                                         class="current-temperature-unit">
                                         <a href="#" id="celsius-link">°C</a> |
                                         <a href="#" id="fahrenheit-link">°F</a>
                                 </div>
+                                <div class="float-right">
                                 <ul class="weather-elements">
                                     <li class="temperature">
-                                    <div class="col-6">
-                                    <li>Chance of precipitation: <span id="precipitation"></span>%</li>
                                     <li>Humidity:<span id="humidity"></span> % </li>
                                     <li>Wind: <span id="wind"></span>km/h</li>
                                     </li>
                                 </div>
-                            </div>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <div class="week-days">
-                        <div class="row">
-                            <div class="col-2">
-                                <li class="days">
-                                    <p class="days-temperature"> Thurs 31°C </p>
-                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-                                        alt=image-days />
-                                </li>
-                            </div>
-                            <div class="col-2">
-                                <li class="days">
-                                    <p class="days-temperature"> Fri 29°C </p>
-                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-                                        alt=image-days />
-                                </li>
-                            </div>
-                            <div class="col-2">
-                                <li class="days">
-                                    <p class="days-temperature"> Sat 28°C </p>
-                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-                                        alt="image-days">
-                                </li>
-                            </div>
-                            <div class="col-2">
-                                <li class="days">
-                                    <p class="days-temperature"> Sun 28°C </p>
-                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png
-                  " alt="image-days">
-                                </li>
-                            </div>
-                            <div class="col-2">
-                                <li class="days">
-                                    <p class="days-temperature"> Mon 27°C </p>
-                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-                                        alt="image-days">
-                                </li>
-                            </div>
-                            <div class="col-2">
-                                <li class="days">
-                                    <p class="days-temperature"> Tues 27°C </p>
-                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-day.png"
-                                        alt="image-days" />
-                                </li>
                             </div>
                         </div>
                         </ul>
                     </div>
                 </div>
-                <p>
-                    <a href="https://github.com/annabella1402/weather-app.git">Open-source code</a> by Annabella
-                    Rivero
-                </p>
-                <script src="src/index.js"></script>
+
+                <div class="week-days">
+                    <div class="row">
+                        <div class="col-2">
+                            <li class="days">
+                                <p class="days-temperature"> Thurs 31°C </p>
+                                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                                    alt=image-days />
+                            </li>
+                        </div>
+                        <div class="col-2">
+                            <li class="days">
+                                <p class="days-temperature"> Fri 29°C </p>
+                                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                                    alt=image-days />
+                            </li>
+                        </div>
+                        <div class="col-2">
+                            <li class="days">
+                                <p class="days-temperature"> Sat 28°C </p>
+                                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+                                    alt="image-days">
+                            </li>
+                        </div>
+                        <div class="col-2">
+                            <li class="days">
+                                <p class="days-temperature"> Sun 28°C </p>
+                                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png
+                  " alt="image-days">
+                            </li>
+                        </div>
+                        <div class="col-2">
+                            <li class="days">
+                                <p class="days-temperature"> Mon 27°C </p>
+                                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+                                    alt="image-days">
+                            </li>
+                        </div>
+                        <div class="col-2">
+                            <li class="days">
+                                <p class="days-temperature"> Tues 27°C </p>
+                                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-day.png"
+                                    alt="image-days" />
+                            </li>
+                        </div>
+                    </div>
+                    </ul>
+                </div>
+            </div>
+            <p>
+                <a href="https://github.com/annabella1402/weather-app.git">Open-source code</a> by Annabella
+                Rivero
+            </p>
+            <script src="script.js"></script>
 
 </body>
 

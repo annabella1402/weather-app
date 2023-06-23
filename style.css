@@ -6,7 +6,6 @@ h1 {
     line-height: 28px;
     margin: 0 auto;
     padding: 10px;
-    margin-bottom: 0;
 }
 
 h2 {
@@ -14,7 +13,7 @@ h2 {
     margin: 10px;
     text-align: left;
     display: block;
-    height: 19px;
+    height: 30px;
     line-height: 1;
     font-size: 16px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -23,7 +22,7 @@ h2 {
 ul {
     margin: 0 0 10px;
     padding: 0;
-    
+
 }
 
 li {
@@ -41,6 +40,7 @@ li {
     padding-right: 9px;
     padding-top: 6px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
 }
 
 .week-days {
@@ -57,6 +57,9 @@ li {
     border-color: lightskyblue;
     display: block;
     text-align: center;
+    border-radius: 18px;
+    width: 140px;
+    height: 40px;
 }
 
 .btn-primary:hover {
