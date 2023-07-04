@@ -14,6 +14,7 @@
 
 <body>
     <div class="container">
+        <div class="weather-app-wrapper">
         <div class="weather-app">
             <form class="search-form">
                 <div class="row">
@@ -39,31 +40,31 @@
                             <h1>
                                 Caracas
                             </h1>
-                            <div class="float-left">
                                 <img id="icon"
-                                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png">
-
-                                <h2>
+                                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" class="float-left">
+                                    <div class="float-left">
+                                    </div>
+                                    <div class="row">
+                                        <div class="float-left"></div>
+                                        <div class="col-5">
+                                        <div class="clearfix weather-temperature">
                                     <span class="temperature" id="temperature"></span>
                                     <span class="units">°C</span>
-                                </h2>
                                 <ul>
                                     <li id="description"></li>
                                 </ul>
                                 <p class="current-time" id="current-time">Saturday 07:30</p>
-                                <div class="float-left">
-                                    <span class="temperature" id="temperature"></span><span
-                                        class="current-temperature-unit">
-                                        <a href="#" id="celsius-link">°C</a> |
-                                        <a href="#" id="fahrenheit-link">°F</a>
                                 </div>
-                                <div class="float-right">
+                            <div class="col-2">
+                                <div class="float-left">
                                 <ul class="weather-elements">
                                     <li class="temperature">
                                     <li>Humidity:<span id="humidity"></span> % </li>
                                     <li>Wind: <span id="wind"></span>km/h</li>
                                     </li>
                                 </div>
+                            </div>
+                                
 
                             </div>
                         </div>
@@ -75,45 +76,69 @@
                     <div class="row">
                         <div class="col-2">
                             <li class="days">
-                                <p class="days-temperature"> Thurs 31°C </p>
+                                <p class="days-temperature"> Thurs</p>
                                 <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-                                    alt=image-days />
+                                    alt="image-days" class="center" />
                             </li>
+                            <div class ="weather-forecast-temperature">
+                                <span class="weather-forecast-temperature-max">31°C</span>
+
+                            </div>
                         </div>
                         <div class="col-2">
                             <li class="days">
-                                <p class="days-temperature"> Fri 29°C </p>
+                                <p class="days-temperature"> Fri </p>
                                 <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-                                    alt=image-days />
+                                    alt="image-days" class="center" />
                             </li>
+                            <div class="weather-forecast-temperature">
+                                <span class="weather-forecast-temperature-max">29°C</span>
+                            
+                            </div>
                         </div>
                         <div class="col-2">
                             <li class="days">
-                                <p class="days-temperature"> Sat 28°C </p>
+                                <p class="days-temperature"> Sat</p>
                                 <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-                                    alt="image-days">
+                                    alt="image-days" class="center">
                             </li>
+                            <div class="weather-forecast-temperature">
+                                <span class="weather-forecast-temperature-max">28°C</span>
+                            
+                            </div>
                         </div>
                         <div class="col-2">
                             <li class="days">
-                                <p class="days-temperature"> Sun 28°C </p>
+                                <p class="days-temperature"> Sun</p>
                                 <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png
-                  " alt="image-days">
+                  " alt="image-days" class="center">
                             </li>
+                            <div class="weather-forecast-temperature">
+                                <span class="weather-forecast-temperature-max">28°C</span>
+                            
+                            </div>
                         </div>
                         <div class="col-2">
                             <li class="days">
-                                <p class="days-temperature"> Mon 27°C </p>
+                                <p class="days-temperature"> Mon</p>
                                 <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-                                    alt="image-days">
+                                    alt="image-days" class="center">
                             </li>
+                            <div class="weather-forecast-temperature">
+                                <span class="weather-forecast-temperature-max">27°C</span>
+                            
+                            </div>
                         </div>
                         <div class="col-2">
                             <li class="days">
-                                <p class="days-temperature"> Tues 27°C </p>
+                                <p class="days-temperature"> Tues</p>
                                 <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-day.png"
-                                    alt="image-days" />
+                                    alt="image-days" class="center" />
                             </li>
+                            <div class="weather-forecast-temperature">
+                                <span class="weather-forecast-temperature-max">27°C</span>
+                            
+                            </div>
                         </div>
                     </div>
                     </ul>

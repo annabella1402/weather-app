@@ -1,6 +1,6 @@
 h1 {
     color: lightskyblue;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Wix Madefor Display",sans-serif;
     font-size: 48px;
     text-align: left;
     line-height: 28px;
@@ -11,12 +11,11 @@ h1 {
 h2 {
     color: lightslategray;
     margin: 10px;
-    text-align: left;
     display: block;
     height: 30px;
     line-height: 1;
     font-size: 16px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Wix Madefor Display",sans-serif;
 }
 
 ul {
@@ -32,6 +31,7 @@ li {
 }
 
 .weather-elements {
+    font-weight: bold;
     list-style-type: none;
     color: #9aa0a6;
     display: inline-block;
@@ -40,7 +40,7 @@ li {
     padding-right: 9px;
     padding-top: 6px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    text-align: right;
+    text-align: left;
 }
 
 .week-days {
@@ -52,6 +52,7 @@ li {
 }
 
 .btn-primary {
+    font-family: "Wix Madefor Display",sans-serif;
     color: white;
     background-color: lightskyblue;
     border-color: lightskyblue;
@@ -78,7 +79,26 @@ li {
     max-width: 600px;
 }
 
-.image-days {
+.days-temperature {
     font-size: 20px;
-    color: #b5b9c0;
+        color: mediumslateblue;
+}
+.image-days {
+    margin-right: 5px;
+    height: 64px;
+    width: 64px;
+}
+
+.overview {
+    margin-bottom: 20px;
+}
+
+.weather-forecast {
+    margin-top: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.weather-forecast-temperature-min {
+    opacity: 0.5;
 }

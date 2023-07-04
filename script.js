@@ -58,6 +58,11 @@ function displayCurrentTime() {
   currentTime.innerHTML = `${day} ${hours}:${minutes}`;
 }
 
+function formatDay(date) {
+
+
+}
+
 function searchCity(event) {
   event.preventDefault();
   let h1 = document.querySelector("h1");
@@ -69,41 +74,55 @@ function searchCity(event) {
 let cityForm = document.querySelector("form");
 cityForm.addEventListener("submit", search);
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+
+
+function formatDay(timestamp) {
+  let date = new date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", ]
+
+  return day;
+
 }
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
-}
-
-displayCurrentTime();
-
-let celsiusTemperature = null;
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-celsiusLink.classList.remove("active");
-fahrenheitLink.classList.add("active");
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = celsiusTemperature;
-}
-
 function displayForecast(response) {
-  let forecast = response.data.daily;
+  console.log(response.data.daily);
+  let forecast = response.data.daily; 
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thurs", "Fri", "Sat", "Sun", "Mon", "Tues"];
+
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="days-temperature">${formatDay(forecastDay.dt)}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 18° </span>
+        </div>
+      </div>
+  `;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+
+  function getForecast(coordinates) {
+    console.log(coordinates);
+    let apiKey="ac209dae1f283fb332a5bb7f50b0f468";
+    let apiUrl='https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric';
+    console.log(apiUrl);
+    axios.get(apiUrl).then(displayForecast);
+  }
 
   let forecastElement = document.querySelector("#forecast");
 
@@ -124,12 +143,9 @@ function displayForecast(response) {
       <span class="weather-forecast-temperature-max"> ${Math.round(
           forecastDay.temp.max
         )}°/</span>
-      <span class="weather-forecast-temperature-min">${Math.round(
-          forecastDay.temp.min
-        )}°</span>
        </div>
       </div>
-   `;
+   `
   }
   });
   forecastHTML = forecastHTML + `</div>`;
@@ -139,7 +155,7 @@ function displayForecast(response) {
 
 function search(event) {
   event.preventDefault();
-  let apiKey = "fct2dcabo6d53af4f49e74e2b4907550";
+  let apiKey = "ac209dae1f283fb332a5bb7f50b0f468";
   let city = document.querySelector("#search-bar").value;
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
   axios.get(apiUrl).then(showTemperature);
@@ -179,7 +195,7 @@ function diplayTemperature(response) {
 
 
 function getCurrentPosition(position) {
-  let apiKey = "fct2dcabo6d53af4f49e74e2b4907550";
+  let apiKey = "ac209dae1f283fb332a5bb7f50b0f468";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let url = `https://api.shecodes.io/weather/v1/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
@@ -189,7 +205,7 @@ function getCurrentPosition(position) {
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
-  searchCity(city);
+  searchCity(cityInputElement.value);
 }
 
 function locationTemperature(event) {
